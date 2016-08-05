@@ -11,11 +11,18 @@
     <title>GitHub User Lookup</title>
   </head>
   <body>
-    <form id="user-lookup">
-      <label for="goal">Username:</label>
-      <input id="username" type="text">
-      <button type="submit">Submit</button>
-    </form>
-    <ul id="solution"></ul>
+    <div class="jumbotron">
+      <h1>GitHub User Lookup</h1>
+    </div>
+    <div class="container">
+      <p>Enter a Github username below and click the button to display profile.</p>
+      <form class="">
+        <label for="username">Username:</label>
+        <input id="username" type="text">
+        <button class=" btn btn-success" id="search" type="submit">Search</button>
+      </form>
+      <div class="showUser"></div>
+    </div>
+
   </body>
 </html>
