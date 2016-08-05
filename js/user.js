@@ -1,13 +1,14 @@
-function GetRepo() {
+var apiKey = require('./../.env').apiKey;
+User = function(username) {
+  this.username = username;
+};
 
-}
-
-exports.getRepos = function(){
-  $.get('https://api.github.com/users/bangnguyen77?access_token=' + 0c260ab5aef36e42d78a2da223831fb5ee777cd0).then(function(response){
-    console.log(response);
+User.prototype.getRepos = function(username){
+  $.get('https://api.github.com/users/' + username + 'repos?access_token=' + apiKey).then(function(response){
+    $("#showProfile").append("username.name, " + "username.description");
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
 };
 
-exports.getReposModule = GetRepos;
+exports.userModule = User;
