@@ -19,8 +19,8 @@ var lib = require('bower-files')({
   }
 });
 var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+// var sass = require('gulp-sass');
+// var sourcemaps = require('gulp-sourcemaps');
 
 //25
 gulp.task('concatInterface', function() {
@@ -44,7 +44,7 @@ gulp.task("minifyScripts", ["jsBrowserify"], function(){
     .pipe(gulp.dest("./build/js"));
 });
 
-//59  co can thiet ko?
+//59
 gulp.task('clean', function(){
   return del(['build', 'tmp']);
 });
@@ -88,7 +88,7 @@ gulp.task('serve', function() {
   gulp.watch(['js/*.js'], ['jsBuild']);
   gulp.watch(['bower.json'], ['bowerBuild']);
   gulp.watch(['*.html'], ['htmlBuild']);
-  gulp.watch(['scss/*.scss'], ['cssBuild']);
+  // gulp.watch(['scss/*.scss'], ['cssBuild']);
 });
 
 //96
@@ -117,12 +117,12 @@ gulp.task('jshint', function(){
     .pipe(jshint.reporter('default'));
 });
 
-//67
-gulp.task('cssBuild', function(){
-  return gulp.src(['scss/*.scss'])
-  .pipe(sourcemaps.init())
-  .pipe(sass())
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./build/css'))
-  .pipe(browserSync.stream());
-});
+// 67
+// gulp.task('cssBuild', function(){
+//   return gulp.src(['scss/*.scss'])
+//   .pipe(sourcemaps.init())
+//   .pipe(sass())
+//   .pipe(sourcemaps.write())
+//   .pipe(gulp.dest('./build/css'))
+//   .pipe(browserSync.stream());
+// });

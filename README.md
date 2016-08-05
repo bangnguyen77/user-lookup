@@ -7,38 +7,12 @@ This app will let users to retrieve data from a Github User.
 
 ## Setup/ Installation
 
-After creating the project directoryj in the terminal, at top level of the project install the following packages:
+** Clone repository: https://github.com/bangnguyen77/user-lookup
+** Install NPM dependencies: npm install
+** Install bower dependencies: bower install
+** Build the project: gulp build
+** Start the server: gulp server
 
-`` install npm:
-npm install gulp --save-dev
-npm install browserify --save-dev
-npm install gulp -g
-npm install vinyl-source-stream --save-dev
-npm install gulp-concat --save-dev
-npm install gulp-uglify --save-dev
-npm install gull util --save.dev
-npm install del --save-dev
-npm install jshint --save-dev
-npm install gulp-jshint --save-dev
-``
-
-`` then install Bower:
-npm install bower -g
-bower install
-bower install jquery --save-dev
-bower install bootstrap --save
-bower install moment --save
-npm install bower-files --save-dev
-npm install browser-browser-sync --save-dev
-``
-`` then install Sass:
-gem install sass (require to have Ruby)
-npm install gulp-sass --save-dev
-npm install gulp-source-maps --save-dev
-This will create the main and test databases.
-
-When clone the repository from GitHub:
-run the following: npm install and bower install
 
 ## Known Bugs
 
@@ -46,13 +20,13 @@ run the following: npm install and bower install
 
 ## Technologies Used
 
-** JavaScript
-** jquery
-** HTML, CSS and Boostrap
+** Node JS
+** Gulp
+** Bower
 ** API
 
-## Link to the webpage:
-
+## Link to the repository:
+** https://github.com/bangnguyen77/user-lookup
 
 ## Legal:
 Copyright (c) 2016 Bang Nguyen

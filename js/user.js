@@ -4,10 +4,13 @@ User = function(username) {
 };
 
 User.prototype.getRepos = function(username){
-  $.get('https://api.github.com/users/' + username + 'repos?access_token=' + apiKey).then(function(response){
-    $("#showProfile").append("username.name, " + "username.description");
+  $.get('https://api.github.com/users/' + username + '/repos?access_token=' + apiKey).then(function(response){
+    response.forEach(function(repository) {
+      $("#showProfile").append("<p>respository name: " + repository.name + "<br>respository description: " + repository.description + "</p>");
+
+    });
   }).fail(function(error){
-    console.log(error.responseJSON.message);
+    $("#showProfile").append("<p>The username doesn't exist in the database</p>");
   });
 };
 
