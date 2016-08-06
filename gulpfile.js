@@ -19,8 +19,8 @@ var lib = require('bower-files')({
   }
 });
 var browserSync = require('browser-sync').create();
-// var sass = require('gulp-sass');
-// var sourcemaps = require('gulp-sourcemaps');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 //25
 gulp.task('concatInterface', function() {
@@ -117,12 +117,12 @@ gulp.task('jshint', function(){
     .pipe(jshint.reporter('default'));
 });
 
-// 67
-// gulp.task('cssBuild', function(){
-//   return gulp.src(['scss/*.scss'])
-//   .pipe(sourcemaps.init())
-//   .pipe(sass())
-//   .pipe(sourcemaps.write())
-//   .pipe(gulp.dest('./build/css'))
-//   .pipe(browserSync.stream());
-// });
+67
+gulp.task('cssBuild', function(){
+  return gulp.src(['scss/*.scss'])
+  .pipe(sourcemaps.init())
+  .pipe(sass())
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('./build/css'))
+  .pipe(browserSync.stream());
+});
