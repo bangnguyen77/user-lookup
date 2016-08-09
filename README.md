@@ -10,7 +10,7 @@ This app will let users to retrieve data from a Github User.
 ** Clone repository: https://github.com/bangnguyen77/user-lookup
 ** Install NPM dependencies: npm install
 ** Install bower dependencies: bower install
-** Include API key in .env file: exports.apiKey="apiKey"
+** Create .env file and include API key in .env file: exports.apiKey="apiKey"
 ** Build the project: gulp build
 ** Start the server: gulp server
 
